@@ -43,7 +43,7 @@ public class bullet : MonoBehaviour
         direction = _direction_;
         gameObject.SetActive(true);
         hit = false;
-        box_collider.enabled = true;
+        //box_collider.enabled = true;
 
         float localScaleX = transform.localScale.x;
         if(Mathf.Sign(localScaleX) != _direction_ )
