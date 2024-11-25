@@ -35,7 +35,7 @@ public class player_mov : MonoBehaviour
             Jump();
         }
 
-        animator.SetBool("is_running",horizontal_input !=0  );
+        animator.SetBool("is_running",horizontal_input !=0);
         animator.SetBool("is_on_ground",is_on_ground==true);
     }
     
