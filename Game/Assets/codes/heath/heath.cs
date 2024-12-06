@@ -4,7 +4,6 @@ using UnityEngine;
 public class heath : MonoBehaviour
 {
     public float initial_heath;
- 
     public float current_heath {get; private set; }
     private Animator animator;
     private bool dead;
@@ -38,12 +37,9 @@ public class heath : MonoBehaviour
        }
        else
        {
-             
-                animator.SetTrigger("die");
-                GetComponent<player_mov>().enabled = false;
-                GetComponent<BoxCollider2D>().enabled = false;
-            
-             
+            animator.SetTrigger("die");
+            GetComponent<player_mov>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
        }
     }
 
@@ -57,10 +53,10 @@ public class heath : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10,11 , true); 
         for(int i=0 ; i< invulnerable_time; i++)
         {
-            sprite_render.color = new Color(1,0,0 , 0.5f);
-            yield return new WaitForSeconds(1);
+            sprite_render.color = new Color(1,0,0 , 0.7f);
+            yield return new WaitForSeconds(0.1f);
             sprite_render.color = Color.white;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
         Physics2D.IgnoreLayerCollision(10,11 , false); 
     }
