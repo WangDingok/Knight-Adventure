@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - boss
+  - Enermy
   layers:
   - Default
   - TransparentFX
@@ -53,4 +55,7 @@ TagManager:
     locked: 0
   - name: ground
     uniqueID: 214159309
+    locked: 0
+  - name: boss
+    uniqueID: 2177181667
     locked: 0
