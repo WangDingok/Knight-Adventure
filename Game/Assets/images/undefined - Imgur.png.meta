@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 413986c4a668c374d8de72a47621b531
+guid: 2c151cc9d9593304e963f282de4b0fbe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terrain (16x16) 1_0
+      name: undefined - Imgur_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 80
-        height: 48
+        x: 189
+        y: 3549
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f754cdb2be59334dbf750a47c4a1f99
-      internalID: -403051943
+      spriteID: f39add52be74add4c8716a96ce51710b
+      internalID: -1188695672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_1
+      name: undefined - Imgur_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 131
-        width: 39
-        height: 41
+        x: 1213
+        y: 3613
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82210711489ade949ae05f38285cbbcc
-      internalID: -1965873869
+      spriteID: 5487c49f0d5985c47a5930d66019ee55
+      internalID: -558056844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_2
+      name: undefined - Imgur_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 48
+        x: 2237
+        y: 3517
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae201ce61a58eff4b80fc8a8423c5a96
-      internalID: 57350232
+      spriteID: 782889364e1d38b448ef2a7a564ddaf5
+      internalID: -1282016338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_3
+      name: undefined - Imgur_3
       rect:
         serializedVersion: 2
-        x: 272
-        y: 171
-        width: 48
-        height: 5
+        x: 189
+        y: 2525
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f48540eca541d3f4192cef3b8da814d6
-      internalID: -46620196
+      spriteID: c619e9eaa5c5b5a4a83a862cace215b1
+      internalID: -165062946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_4
+      name: undefined - Imgur_4
       rect:
         serializedVersion: 2
-        x: 272
-        y: 155
-        width: 48
-        height: 5
+        x: 1213
+        y: 2589
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92052c52868cabe429b8f61c34638797
-      internalID: -466111348
+      spriteID: 02577cce90978314e83def24e8f4435f
+      internalID: -1652186671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_5
+      name: undefined - Imgur_5
       rect:
         serializedVersion: 2
-        x: 272
-        y: 139
-        width: 48
-        height: 5
+        x: 2237
+        y: 2493
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48134651e22eec54eaa4b6e8f4c4e232
-      internalID: -1741265149
+      spriteID: 02fab9b6e5b703e4abff9fec48e2b38d
+      internalID: -225055960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_6
+      name: undefined - Imgur_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 80
-        height: 48
+        x: 189
+        y: 1501
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d075f4964e4f5f458e1b0ef9dcb73f4
-      internalID: 1218847390
+      spriteID: 1dacbd9d89acbbe42a94ca62539ac49d
+      internalID: -1363030478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_7
+      name: undefined - Imgur_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 80
-        height: 48
+        x: 1213
+        y: 1565
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa0d05f9819f04249abdf739233dedc7
-      internalID: 1396543405
+      spriteID: 4a8dfd897a5dd8149a195e27783de813
+      internalID: 632670945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_8
+      name: undefined - Imgur_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 48
+        x: 2237
+        y: 1469
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1386474af9a983b49834d0b48b5d7588
-      internalID: -717987601
+      spriteID: 44d05a2cbc82f2e449e430134caa59c9
+      internalID: 1378643007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_9
+      name: undefined - Imgur_9
       rect:
         serializedVersion: 2
-        x: 272
-        y: 64
-        width: 80
-        height: 48
+        x: 189
+        y: 413
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9decae2ff3ed9488c6ab99c9f47bb0
-      internalID: 296722410
+      spriteID: 98745b772fa8b2d4eb814145f38e0d82
+      internalID: -425317090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_10
+      name: undefined - Imgur_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 48
+        x: 1213
+        y: 477
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c80c2a5f20bf3141aaed78e48c516b8
-      internalID: 1808211352
+      spriteID: 115ecdabb1170d646ad22aee1a1f404d
+      internalID: -1038347095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16) 1_11
+      name: undefined - Imgur_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 80
-        height: 48
+        x: 2237
+        y: 381
+        width: 550
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,113 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f01424a9cc52d34090ff53b8d559cc1
-      internalID: 2075496297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16) 1_12
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3b643264bb06f44a864b7f333aa15cc
-      internalID: -587789650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16) 1_13
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e87e3059e00d9eb4d921b7a64afa098a
-      internalID: 1844764069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16) 1_14
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 85
-        width: 6
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 043784e780b51f3438c6422030ac748f
-      internalID: 831879340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16) 1_15
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 120
-        width: 2
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b49788b1297458b429d3705551c1f363
-      internalID: 1810985914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16) 1_16
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 115
-        width: 1
-        height: 1
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc0a93d63fd008443ad7f98b8a7be546
-      internalID: 272298344
+      spriteID: f470f3dd69b6cec41aec5e4284f3409a
+      internalID: 2029129016
       vertices: []
       indices: 
       edges: []
@@ -464,23 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Terrain (16x16) 1_0: -403051943
-      Terrain (16x16) 1_1: -1965873869
-      Terrain (16x16) 1_10: 1808211352
-      Terrain (16x16) 1_11: 2075496297
-      Terrain (16x16) 1_12: -587789650
-      Terrain (16x16) 1_13: 1844764069
-      Terrain (16x16) 1_14: 831879340
-      Terrain (16x16) 1_15: 1810985914
-      Terrain (16x16) 1_16: 272298344
-      Terrain (16x16) 1_2: 57350232
-      Terrain (16x16) 1_3: -46620196
-      Terrain (16x16) 1_4: -466111348
-      Terrain (16x16) 1_5: -1741265149
-      Terrain (16x16) 1_6: 1218847390
-      Terrain (16x16) 1_7: 1396543405
-      Terrain (16x16) 1_8: -717987601
-      Terrain (16x16) 1_9: 296722410
+      undefined - Imgur_0: -1188695672
+      undefined - Imgur_1: -558056844
+      undefined - Imgur_10: -1038347095
+      undefined - Imgur_11: 2029129016
+      undefined - Imgur_2: -1282016338
+      undefined - Imgur_3: -165062946
+      undefined - Imgur_4: -1652186671
+      undefined - Imgur_5: -225055960
+      undefined - Imgur_6: -1363030478
+      undefined - Imgur_7: 632670945
+      undefined - Imgur_8: 1378643007
+      undefined - Imgur_9: -425317090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
