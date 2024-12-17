@@ -21,6 +21,7 @@ public class player_attack : MonoBehaviour
     private Animator animator; 
     private player_mov player_movement;
     private float cooldown_time = Mathf.Infinity;
+    private float cooldown_time_2 = Mathf.Infinity;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +37,13 @@ public class player_attack : MonoBehaviour
             Attack_Shooting(); 
         }
 
-        if (Input.GetKey(KeyCode.J) && cooldown_time > cooldown_attack_sword)
+        if (Input.GetKey(KeyCode.J) && cooldown_time_2 > cooldown_attack_sword)
         {
             Attack();
         }
 
         cooldown_time += Time.deltaTime;
+        cooldown_time_2 += Time.deltaTime;
         
     }
 

@@ -216,6 +216,7 @@ MonoBehaviour:
   components:
   - {fileID: 1228409433909559937}
   - {fileID: 0}
+  - {fileID: 6698989788327875468}
   invulnerable_time: 1
 --- !u!114 &1228409433909559937
 MonoBehaviour:
@@ -230,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casting_sound: {fileID: 8300000, guid: fd744c33b954ea94a9b1823f8335a4b8, type: 3}
+  player: {fileID: 4257374375911477946, guid: 7169a1e237fbd8e41a14d7af628c0025, type: 3}
   attack_cooldown: 2
   dam: 0.5
   box_collider: {fileID: 6698989788327875468}
