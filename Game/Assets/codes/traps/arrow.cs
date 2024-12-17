@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
+    public AudioClip arrow_sound;
     public float cooldown;
     public Transform fire_point;
     public GameObject[] fire_index;
     private float cooldown_time;
 
+
     void Attack()
     {
         cooldown_time = 0;
-
+        Music.Use_for_all.Play_sound(arrow_sound);
         fire_index[Find_fire()].transform.position = fire_point.position;
         fire_index[Find_fire()].GetComponent<enemy_projecttile>().ActivateProjectile();
     }

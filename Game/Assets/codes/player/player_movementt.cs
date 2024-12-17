@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class player_mov : MonoBehaviour
 {
+    public AudioClip jump_sound;
     public float movement_speed;
     private Rigidbody2D body;
     private Animator animator;
-    private bool is_on_ground;
+    public bool is_on_ground;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class player_mov : MonoBehaviour
 
         if ( Input.GetKeyDown(KeyCode.Space) && is_on_ground==true)
         {
+            Music.Use_for_all.Play_sound(jump_sound);
             Jump();
         }
 
