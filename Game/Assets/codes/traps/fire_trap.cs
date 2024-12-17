@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class fire_trap : MonoBehaviour
 {
-    public float damage;                // Sát thương mỗi lần
-    public float cooldown_activation;   // Thời gian giữa mỗi lần gây sát thương
-    public float time_activate;         // Thời gian bẫy hoạt động
+    public AudioClip fire_trap_sound;
+    public float damage;                 
+    public float cooldown_activation;    
+    public float time_activate;          
     private Animator animator;
     private SpriteRenderer sprite_renderer;
     private bool triggerer;
     private bool activate;
     private heath player_health;  
-    private float damageTimer;        // Cách viết đúng "Health" thay vì "heath"
+    private float damageTimer;        
 
     void Start()
     {
@@ -26,11 +27,11 @@ public class fire_trap : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            // Khi người chơi vào bẫy, lấy thông tin sức khỏe
             player_health = collision.GetComponent<heath>();
             if (player_health != null && !triggerer)
             {
                 StartCoroutine(Activation_trap());
+                Music.Use_for_all.Play_sound(fire_trap_sound);
             }
         }
     }
@@ -39,7 +40,7 @@ public class fire_trap : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            player_health = null; // Gỡ sức khỏe khi người chơi ra khỏi bẫy
+            player_health = null;
         }
     }
  
@@ -47,14 +48,11 @@ public class fire_trap : MonoBehaviour
     {
         if (activate && player_health != null)
         {
-            // Tính toán thời gian và gây sát thương mỗi giây
             damageTimer += Time.deltaTime;
-
-            // Chỉ gây sát thương mỗi lần tính đủ thời gian (ví dụ mỗi 0.1 giây)
             if (damageTimer >= 0.1f) 
             {
-                player_health.take_damage(damage * 0.2f); // Chia nhỏ sát thương theo thời gian
-                damageTimer = 0f; // Reset timer sau mỗi lần gây sát thương
+                player_health.Take_damage(damage * 0.2f); 
+                damageTimer = 0f;
             }
         }
     }
@@ -62,20 +60,16 @@ public class fire_trap : MonoBehaviour
     IEnumerator Activation_trap()
     {
         triggerer = true;
-        sprite_renderer.color = Color.red; // Đổi màu bẫy khi kích hoạt
-        yield return new WaitForSeconds(cooldown_activation); // Đợi cooldown trước khi gây sát thương
+        sprite_renderer.color = Color.red; 
+        yield return new WaitForSeconds(cooldown_activation); 
 
-        // Kích hoạt bẫy
         activate = true;
         animator.SetBool("activated", true);
 
-        // Tiến hành thiệt hại theo thời gian
         yield return new WaitForSeconds(time_activate);
-
-        // Dừng thiệt hại và tắt bẫy
         activate = false;
         triggerer = false;
         animator.SetBool("activated", false);
-        sprite_renderer.color = Color.white; // Khôi phục lại màu sắc của bẫy
+        sprite_renderer.color = Color.white; 
     }
 }

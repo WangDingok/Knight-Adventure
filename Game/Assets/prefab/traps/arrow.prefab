@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6254fc83dce73894c9b411f0979b080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow_sound: {fileID: 8300000, guid: 14009fa7b0519724eafca8379140ee8d, type: 3}
   cooldown: 3
   fire_point: {fileID: 265681953928560451}
   fire_index:

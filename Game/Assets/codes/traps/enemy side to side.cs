@@ -49,7 +49,7 @@ public class enemysidetoside : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            collision.GetComponent<heath>().take_damage(dam); 
+            collision.GetComponent<heath>().Take_damage(dam); 
         } 
     }
 }

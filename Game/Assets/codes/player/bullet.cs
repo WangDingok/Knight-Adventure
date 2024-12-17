@@ -3,19 +3,24 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public float bullet_speed ;
+    public float bullet_speed;
+    public float dam;
     public bool hit;
 
     private float direction;
     private Animator animator;
     private BoxCollider2D box_collider;
     private float duration;
+    public LayerMask attackMask;
+
+    //public BossHealth bossHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>(); 
         box_collider = GetComponent<BoxCollider2D>();
+        //bossHealth = GetComponent<BossHealth>();
     }
 
     // Update is called once per frame
@@ -34,7 +39,12 @@ public class bullet : MonoBehaviour
     {
         hit = true;
         box_collider.enabled = false;
-        animator.SetTrigger("explore"); 
+        animator.SetTrigger("explore");
+        
+        if(collision.tag == "Enemy")
+        {
+            collision.GetComponent<heath>().Take_damage(1);
+        }
     }
 
     public void SetDirection(float _direction_)

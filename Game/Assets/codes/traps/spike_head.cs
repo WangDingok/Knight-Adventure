@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class spike_head : enemy_damage
 {
+    public AudioClip spike_head_sound;
     public LayerMask player_layer;
     public float speed;
     public float range;
@@ -35,8 +36,8 @@ public class spike_head : enemy_damage
         direction();
         for(int i=0 ;i< moving_direction.Length; i++)
         {
-            Debug.DrawRay(transform.position,moving_direction[i],Color.red);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position , moving_direction[i] , range , player_layer);
+            //Debug.DrawRay(transform.position,moving_direction[i],Color.red);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position , moving_direction[i] , range/2 , player_layer);
 
             if (hit.collider !=null && !attack)
             {
@@ -64,6 +65,7 @@ public class spike_head : enemy_damage
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Music.Use_for_all.Play_sound(spike_head_sound);
         base.OnTriggerEnter2D(collision);
         stop();
     }

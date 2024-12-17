@@ -3,24 +3,14 @@ using UnityEngine;
 
 public class heath_item_collect : MonoBehaviour
 {
+    public AudioClip add_heath_sound;
     public float heath_value;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            collision.GetComponent<heath>().add_heath(heath_value);
+            Music.Use_for_all.Play_sound(add_heath_sound);
+            collision.GetComponent<heath>().Add_heath(heath_value);
             gameObject.SetActive(false);
         }
     }

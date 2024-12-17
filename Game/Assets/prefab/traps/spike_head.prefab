@@ -171,10 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b70efeb429a3b41ab93a443264a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.5
+  spike_head_sound: {fileID: 8300000, guid: 00f57cae38ed75d49ab6d04c15ca8106, type: 3}
   player_layer:
     serializedVersion: 2
     m_Bits: 1024
-  speed: 5
+  speed: 0.1
   range: 20
-  delay: 1
+  delay: 3

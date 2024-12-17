@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9532787d0455ad04c9c04ce19a6337bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire_trap_sound: {fileID: 8300000, guid: 94a9c0849fb8b6e48b9dc0046b548ae7, type: 3}
   damage: 1
   cooldown_activation: 0.5
   time_activate: 1
