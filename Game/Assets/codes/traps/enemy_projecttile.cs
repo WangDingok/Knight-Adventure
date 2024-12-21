@@ -24,7 +24,6 @@ public class enemy_projecttile : enemy_damage
         hit = false;
         life_time = 0;
         gameObject.SetActive(true);
-        collider2d.enabled = true;
     }
 
 

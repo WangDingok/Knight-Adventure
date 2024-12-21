@@ -1,40 +1,87 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-	public Transform player;
-	public bool isFlipped = false;
+    public AudioClip fight_sound;
 
-	// Start is called before the first frame update
-	void Start()
+    public float attack_cooldown;
+    public float dam;
+    public BoxCollider2D box_collider;
+    public float collider_distance;
+    private float cooldown_time = Mathf.Infinity;
+    public float range;
+
+    private BossPatrol patrol;
+    private heath boss_heath;
+    private heath player_heath;
+
+    public LayerMask player_layer;
+    private Animator animator;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        patrol = GetComponentInParent<BossPatrol>();
+        boss_heath = GetComponentInParent<heath>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        cooldown_time += Time.deltaTime;
+        if (Seeplayer())
+        {
+            if (cooldown_time >= attack_cooldown)
+            {
+                Music.Use_for_all.Play_sound(fight_sound);
+                cooldown_time = 0;
+                if (boss_heath.current_heath <= 20)
+                {
+                    animator.SetTrigger("attack_v2");
+                }
+                else
+                {
+                    animator.SetTrigger("attack");
+                }
+            }
+        }
+
+        if (patrol != null)
+        {
+            patrol.enabled = !Seeplayer();
+        }
+
     }
 
-	public void LookAtPlayer()
-	{
-		Vector3 flipped = transform.localScale;
-		flipped.z *= -1f;
+    private bool Seeplayer()
+    {
+        RaycastHit2D hit = Physics2D.BoxCast(box_collider.bounds.center + transform.right * range * transform.localScale.x * collider_distance,
+        new Vector3(box_collider.bounds.size.x * range, box_collider.bounds.size.y, box_collider.bounds.size.z),
+        0, Vector2.left, 0, player_layer);
 
-		if (transform.position.x > player.position.x && isFlipped)
-		{
-			transform.localScale = flipped;
-			transform.Rotate(0f, 180f, 0f);
-			isFlipped = false;
-		}
-		else if (transform.position.x < player.position.x && !isFlipped)
-		{
-			transform.localScale = flipped;
-			transform.Rotate(0f, 180f, 0f);
-			isFlipped = true;
-		}
-	}
+        if (hit.collider != null)
+        {
+            player_heath = hit.transform.GetComponent<heath>();
+            return true;
+        }
+        else
+            return false;
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(box_collider.bounds.center + transform.right * range * transform.localScale.x * collider_distance,
+        new Vector3(box_collider.bounds.size.x * range, box_collider.bounds.size.y, box_collider.bounds.size.z));
+    }
+
+    void dam_player()
+    {
+        if (Seeplayer())
+        {
+            player_heath.Take_damage(dam);
+        }
+    }
 }
