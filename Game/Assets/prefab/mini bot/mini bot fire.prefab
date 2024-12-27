@@ -215,7 +215,6 @@ MonoBehaviour:
   initial_heath: 5
   components:
   - {fileID: 1228409433909559937}
-  - {fileID: 0}
   - {fileID: 6698989788327875468}
   invulnerable_time: 1
 --- !u!114 &1228409433909559937
