@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Boss_run : MonoBehaviour
 {
-    public float speed = 7f;
+    public float speed;
     public float rangeAttack;
     public float range_see_player;
+    public float enrage_heath;
     Rigidbody2D rb;
     Boss boss;
     Transform player;
     Animator animator;
     heath bossHealth;
+    public float attack_cooldown;
+    float cooldown_time = Mathf.Infinity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +41,21 @@ public class Boss_run : MonoBehaviour
 
         boss.LookAtPlayer();
         //float rangetoPlayer = Mathf.Abs(Vector2.Distance(player.position, rb.position));
-        animator.SetBool("attack_v2", rangetoPlayer <= rangeAttack & bossHealth.current_heath <= 20f);
+        cooldown_time += Time.deltaTime;
 
-        animator.SetBool("attack", rangetoPlayer <= rangeAttack & bossHealth.current_heath > 20f);
+        if (cooldown_time >= attack_cooldown)
+        {
 
+            if (rangetoPlayer <= rangeAttack && bossHealth.current_heath <= enrage_heath)
+            {
+                animator.SetTrigger("attack_v2_1"); 
+                cooldown_time = 0;
+            }
+            else if (rangetoPlayer <= rangeAttack && bossHealth.current_heath > enrage_heath)
+            {
+                animator.SetTrigger("attack_1"); 
+                cooldown_time = 0;
+            }
+        }
     }
 }

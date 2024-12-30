@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 9181419827508992659}
   - component: {fileID: 3509099729590746640}
   - component: {fileID: 525601887032422425}
+  - component: {fileID: 6994150358404729699}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump_sound: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
   movement_speed: 10
+  is_on_ground: 0
 --- !u!95 &9181419827508992659
 Animator:
   serializedVersion: 5
@@ -242,7 +244,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casting_sound: {fileID: 8300000, guid: fd744c33b954ea94a9b1823f8335a4b8, type: 3}
+  dam: 0
+  box_collider: {fileID: 0}
+  range: 0
+  enemy:
+    serializedVersion: 2
+    m_Bits: 0
+  collider_distance: 0
   cooldown_attack: 0.75
+  cooldown_attack_sword: 0
   bullet_point: {fileID: 1899412425336106403}
   bullet_index:
   - {fileID: 0}
@@ -273,4 +283,18 @@ MonoBehaviour:
   components:
   - {fileID: 3509099729590746640}
   - {fileID: 6237448606225545888}
+  - {fileID: 5968119615654299081}
   invulnerable_time: 2
+--- !u!114 &6994150358404729699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3313752179458521464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39086eae345d34748b3bdf0d9c138177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  re_life_sound: {fileID: 0}

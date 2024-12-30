@@ -41,11 +41,12 @@ public class heath : MonoBehaviour
        }
        else
        {
-            animator.SetTrigger("die");
             foreach(Behaviour component in components)
             {
                 component.enabled = false;
             }
+            animator.SetBool("is_on_ground",true);
+            animator.SetTrigger("die");
             Music.Use_for_all.Play_sound(die_sound);
        }
     }
@@ -54,6 +55,20 @@ public class heath : MonoBehaviour
     public void Add_heath(float _value_)
     {
         current_heath = Mathf.Clamp(current_heath + _value_ , 0 , initial_heath);
+    }
+
+    public void Re_life()
+    {
+        Add_heath(initial_heath);
+        animator.ResetTrigger("die");
+        animator.Play("IDLE");
+        StartCoroutine(Invulnerable());
+
+        foreach(Behaviour component in components)
+        {
+            component.enabled = true;
+        }
+
     }
 
     IEnumerator Invulnerable()

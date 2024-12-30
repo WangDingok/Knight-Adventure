@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,12 +7,12 @@ public class BossSword : MonoBehaviour
 {
     public AudioClip sword_sound;
     public Vector3 attackOffset;
-    public float attackRange = 2f;
+    public float attackRange;
     public LayerMask attackMask;
-    [SerializeField] private float normalDamage = 0.5f;
-    [SerializeField] private float enragedDamage = 1f;
+    [SerializeField] private float normalDamage;
+    [SerializeField] private float enragedDamage;
     heath playerHealth;
-
+    
     public void Attack()
     {
         PerformAttack(normalDamage);
