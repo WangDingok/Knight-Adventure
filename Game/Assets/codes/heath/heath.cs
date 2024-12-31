@@ -11,9 +11,11 @@ public class heath : MonoBehaviour
     public float current_heath {get; private set; }
     private Animator animator;
     public Behaviour[] components;
+    public Transform player_pos;
 
     [Header("when hurt")]
     public float invulnerable_time;
+    bool die;
     private SpriteRenderer sprite_render;
     // Start is called before the first frame update
     void Start()
@@ -21,17 +23,22 @@ public class heath : MonoBehaviour
           current_heath = initial_heath;
           animator = GetComponent<Animator>();
           sprite_render = GetComponent<SpriteRenderer>();
+          player_pos = GetComponent<Transform>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+        if (player_pos.position.y < -30f&&die!=true)
+    {
+        Take_damage(current_heath);  
+    }
     }
 
     public void Take_damage(float _damage_)
     {
+        if (die) return;
         current_heath = Mathf.Clamp(current_heath - _damage_ , 0 , initial_heath); 
        if(current_heath > 0)
        {
@@ -41,6 +48,7 @@ public class heath : MonoBehaviour
        }
        else
        {
+            die = true; 
             foreach(Behaviour component in components)
             {
                 component.enabled = false;
@@ -49,6 +57,7 @@ public class heath : MonoBehaviour
             animator.SetTrigger("die");
             Music.Use_for_all.Play_sound(die_sound);
        }
+
     }
     
 
@@ -68,7 +77,7 @@ public class heath : MonoBehaviour
         {
             component.enabled = true;
         }
-
+        die = false;
     }
 
     IEnumerator Invulnerable()

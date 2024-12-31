@@ -3671,8 +3671,8 @@ Transform:
   m_GameObject: {fileID: 1215924855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: -0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -10.3, y: 5.1, z: 0}
+  m_LocalScale: {x: 1.25, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1667095042}
@@ -4214,6 +4214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2076417864141646615, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -241
+      objectReference: {fileID: 0}
     - target: {fileID: 2136750211131698766, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4294,9 +4298,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2191149707480887989, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 2343334443326550116, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
       propertyPath: m_Name
       value: UI_canvas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898964056508682448, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042246504436160694, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042246504436160694, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8984047295829272379, guid: 2cad4ccfff415974a9dfee8646429124, type: 3}
       propertyPath: player_heath

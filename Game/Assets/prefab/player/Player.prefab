@@ -298,3 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   re_life_sound: {fileID: 0}
+  player: {fileID: 4257374375911477946}

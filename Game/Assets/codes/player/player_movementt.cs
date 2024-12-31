@@ -50,9 +50,23 @@ public class player_mov : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        // Kiểm tra va chạm với đối tượng có tag "Ground"
+    if (collision.gameObject.CompareTag("Ground"))
+    {
+        // Lấy thông tin va chạm
+        ContactPoint2D contact = collision.contacts[0];
+        if (contact.normal.y > 0.5f)
         {
             is_on_ground = true;
         }
+        else if (Mathf.Abs(contact.normal.x) > 0.5f)
+        {
+            is_on_ground = true;
+        }
+        else
+        {
+            is_on_ground = false;
+        }
+    }
     }
 }
